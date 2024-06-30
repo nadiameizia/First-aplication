@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Aplication for Counting</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background-image: url(mountain.jpeg);
+      display: flex;
+      justify-content: center;
+    }
+   .container {
+     margin-top: 3rem;
+     width: 60%;
+     height: 70vh;
+     height: 70vh;
+     background-color: rgba(172, 132, 166, 0.52);
+     border-radius: 10px;
+     text-align: center;
+      border: 2px solid black;
+      padding: 3rem;
+      box-shadow: 1px 1px 1px 0.5px;
+    }
+    button {
+      font-weight: 500;
+      padding: 10px;
+      color: white;
+      background: salmon;
+      margin: .5rem;
+    }
+    h3{
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+    p {
+      font-size: 2rem;
+    }
+    #simpan{
+      border: 2px solid black;
+    }
+    
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h3>Hitung Urutan</h3>
+    <p id="nomor">0</p>
+    <button onclick="hitung()">Hitung</button>
+    <button onclick="simNmr()">Simpan</button>
+    <button onclick="hapus()">Hapus</button>
+    <p id="simpan"></p>
+    
+  </div>
+  
+  <script>
+  var mulai = 0;
+  var tmbNomor = document.getElementById("nomor");
+  var saveNmr = document.getElementById("simpan");
+   function hitung(){
+     mulai = mulai + 1
+     tmbNomor.innerText = mulai
+   };
+   function simNmr(){
+     var Strsave = mulai +" - "
+     saveNmr.innerHTML += Strsave
+     mulai = 0
+     tmbNomor.textContent = 0
+   }
+   function hapus(){
+     saveNmr.textContent = ""
+   }
+   
+  </script>
+</body>
+</html>
